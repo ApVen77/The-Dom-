@@ -1,0 +1,22 @@
+input:invalid {
+    border: 2px dashed red;
+  }
+  
+  input:valid {
+    border: 2px solid black;
+  }
+
+  input:required {
+      background-color: grey;
+  }
+
+
+  input:checked {
+      color: black;
+  }
+
+  input:read-only {
+      background-color: yellow;
+  }
+
+ 
