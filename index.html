@@ -9,14 +9,7 @@
 </head>
 
 <body>
-    <h1>About Me</h1>
-
-    <ul>
-        <li>Nickname: <span id="nickname"></span>
-        <li>Favorites: <span id="favorites"></span>
-        <li>Hometown: <span id="hometown"></span>
-        <li>Interests: <span id="interests"></span>
-    </ul>
+    
 
 
     <!-- <form name="contactForm" id="form" onsubmit="return validateForm()" action=" " method="get" autocomplete="on">
@@ -75,26 +68,26 @@
     </form> -->
 
 
-    <form name="contactForm" onsubmit="return validateForm()" action="#" method="get">
+    <form name="contactForm" onsubmit="return validateForm()" action="#" method="get" autocomplete="on">
         <h2>Application Form</h2>
         <div class="row">
             <label>Full Name</label>
-            <input type="text" name="name">
+            <input type="text" name="name" required focus>
             <div class="error" id="nameErr"></div>
         </div>
         <div class="row">
             <label>Email Address</label>
-            <input type="text" name="email" min="7">
+            <input type="text" name="email" min="7" required>
             <div class="error" id="emailErr"></div>
         </div>
         <div class="row">
             <label>Mobile Number</label>
-            <input type="text" name="mobile">
+            <input type="text" name="mobile" pattern="^[0-9]{10}$" placeholder="must be 10 digits">
             <div class="error" id="mobileErr"></div>
         </div>
         <div class="row">
             <label>Password</label>
-            <input type="password" name="password">
+            <input type="password" name="password" placeholder="at least 1 number, and 1 uppercase and lowercase" pattern= (?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}>
             <div class="error" id="mobileErr"></div>
         </div>
 
@@ -125,47 +118,21 @@
                 <label><input type="checkbox" name="hobbies[]" value="music"> Music</label>
             </div>
         </div>
+        <br>
+        <br>
         <div class="row">
             <input type="submit" value="Submit">
         </div>
     </form>
 
-    <h1>Mad Libs</h1>
-
-    <ul>
-        <li>Noun: <input type="text" id="noun">
-        <li>Adjective: <input type="text" id="adjective">
-        <li>Someone's Name: <input type="text" id="person">
-    </ul>
-
-    <!-- <button id="lib-button">Lib it!</button> -->
-
-    <div id="story"></div>
-
-    <p id='text'>JavaScript Exercises - w3resource</p>
-    
-
-    <button onclick = "changeColor()">Click Me!</button> 
-    <!-- <div onmouseover="mOver(this)" onmouseout="mOut(this)"
-        >
-        Mouse Over Me</div>
-
-    <div onmouseover="mOver1(this)" onmouseout="mOut1(this)"> Capital of NewYork</div> -->
-<input type="color" id="color">
+    <br>
+    <hr>
 <br>
-<input type="datetime-local" id="date">
 <br>
-<input type= "file" id="file">
-<br>
-<input type="month">
-<br>
-<input type="search">
-<br>
-<input type="time">
-<br>
-<input type="week">
 
-<h1><strong><em><u>April Long</u></em></strong></h1>
+
+
+
 </body>
 
 </html>
