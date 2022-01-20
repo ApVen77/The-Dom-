@@ -1,5 +1,6 @@
-document.addEventListener('DOMContentLoaded', function(){
+// document.addEventListener('DOMContentLoaded', function(){
 
+    //grab the quote list and its ul properties
     const list = document.querySelector('#quote-list ul');
     const forms = document.forms;
   
@@ -7,11 +8,13 @@ document.addEventListener('DOMContentLoaded', function(){
     list.addEventListener('click', (e) => {
       if(e.target.className == 'delete'){
         const li = e.target.parentElement;
-        li.parentNode.removeChild(li);
+        list.removeChild(li);
       }
     });
+
+
   
-    // add quotes
+    // add quotes 
     const addForm = forms['add-quote'];
     addForm.addEventListener('submit', function(e){
       e.preventDefault();
@@ -24,7 +27,8 @@ document.addEventListener('DOMContentLoaded', function(){
   
       // add text content
       quoteName.textContent = value;
-      deleteBtn.textContent = 'delete';
+      deleteBtn.textContent = 'Delete';
+      
   
       // add classes
       quoteName.classList.add('name');
@@ -42,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function(){
       if(hideBox.checked){
         list.style.display = "none";
       } else {
-        list.style.display = "initial";
+        list.style.display = "block";
       }
     });
   
@@ -51,30 +55,41 @@ document.addEventListener('DOMContentLoaded', function(){
     searchBar.addEventListener('keyup', (e) => {
       const term = e.target.value.toLowerCase();
       const quotes = list.getElementsByTagName('li');
-      Array.from(quotes).forEach((quotes) => {
-        const title = book.firstElementChild.textContent;
+      Array.from(quotes).forEach((quote) => {
+        const title = quote.firstElementChild.textContent;
         if(title.toLowerCase().indexOf(e.target.value) != -1){
-          quotes.style.display = 'block';
+          quote.style.display = 'block';
         } else {
-          quotes.style.display = 'none';
+          quote.style.display = 'none';
         }
       });
     });
   
-    // tabbed content
-    const tabs = document.querySelector('.tabs');
-    const panels = document.querySelectorAll('.panel');
-    tabs.addEventListener('click', (e) => {
-      if(e.target.tagName == 'LI'){
-        const targetPanel = document.querySelector(e.target.dataset.target);
-        Array.from(panels).forEach((panel) => {
-          if(panel == targetPanel){
-            panel.classList.add('active');
-          }else{
-            panel.classList.remove('active');
-          }
-        });
-      }
-    });
+//     // tabbed content
+//     const tabs = document.querySelector('.tabs');
+//     const panels = document.querySelectorAll('.panel');
+//     tabs.addEventListener('click', (e) => {
+//       if(e.target.tagName == 'LI'){
+//         const targetPanel = document.querySelector(e.target.dataset.target);
+//         Array.from(panels).forEach((panel) => {
+//           if(panel == targetPanel){
+//             panel.classList.add('active');
+//           }else{
+//             panel.classList.remove('active');
+//           }
+//         });
+//       }
+//     });
   
-  })
+//   })
+
+  
+// var counterButton = document.getElementById('lib-button');
+// var todayDate= new Date(); 
+// var mouseOver = function() {
+//     counterButton.innerHTML = todayDate; 
+// };
+
+// var mouseOut= function() {
+//     counterButton.innerHTML=counterButton;
+// };
