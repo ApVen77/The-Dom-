@@ -24,16 +24,7 @@
   input:read-only {
       background-color: yellow;
   }
-
   
-  
-
-  body {
-      background-color: rosybrown;
-      background-size: contain;
-      background-repeat: no-repeat;
-   
-  }
   
   form {
     max-width: 580px;
@@ -75,6 +66,9 @@
     font-family: 'Playfair Display', serif;
     color: #444;
     letter-spacing: 1px;
+    background-color: rosybrown;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 h1, h2{
