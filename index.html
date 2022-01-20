@@ -4,6 +4,9 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
     <title>About Me</title>
 
 </head>
@@ -68,7 +71,7 @@
     </form> -->
 
 
-    <form name="contactForm" onsubmit="return validateForm()" action="#" method="get" autocomplete="on">
+    <!-- <form name="contactForm" onsubmit="return validateForm()" action="https://apven77.github.io/The-Dom-/forms.html" method="get" autocomplete="on">
         <h2>Application Form</h2>
         <div class="row">
             <label>Full Name</label>
@@ -123,16 +126,126 @@
         <div class="row">
             <input type="submit" value="Submit">
         </div>
+    </form> -->
+
+    <form name="contactForm" onsubmit="return validateForm()" action="#" method="get">
+        <h2>Application Form</h2>
+        <div class="row">
+            <label>Full Name</label>
+            <input type="text" name="name" required>
+            <div class="error" id="nameErr"></div>
+        </div>
+        <div class="row">
+            <label>Email Address</label>
+            <input type="text" name="email" min="7">
+            <div class="error" id="emailErr"></div>
+        </div>
+        <div class="row">
+            <label>Mobile Number</label>
+            <input type="text" name="mobile">
+            <div class="error" id="mobileErr"></div>
+        </div>
+        <div class="row">
+            <label>Password</label>
+            <input type="password" name="password">
+            <div class="error" id="mobileErr"></div>
+        </div>
+       
+        <div class="row">
+            <label>Country</label>
+            <select name="country">
+                <option>Select</option>
+                <option>Canada</option>
+                <option>Mexico</option>
+                <option>United States</option>
+                <option>Greenland</option>
+            </select> 
+            <div class="error" id="countryErr"></div>
+        </div>
+        <div class="row">
+            <label>Gender</label>
+            <div class="form-inline">
+                <label><input type="radio" name="gender" value="male"> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label> 
+            </div>
+            <div class="error" id="genderErr"></div>
+        </div>
+        <div class="row">
+            <label>Hobbies <i>(Optional)</i></label>
+            <div class="form-inline">
+                <label><input type="checkbox" name="hobbies[]" value="sports"> Sports</label>
+                <label><input type="checkbox" name="hobbies[]" value="movies"> Movies</label>
+                <label><input type="checkbox" name="hobbies[]" value="music"> Music</label>  
+            </div>
+        </div>        
+        <div class="row">
+            <input type="submit" value="Submit">
+        </div>
     </form>
 
     <br>
     <hr>
 <br>
 <br>
+<hr>
+
+<div id="wrapper">
+    <header>
+        <div id="page-banner">
+            <h1 class="title">Inspirational Quotes</h1>
+      <p><strong>Quotes with Meaning 🗯</strong></p>
+      <form id="search-quotes">
+        <input type="text" placeholder="Write a Quote" />
+      </form>
+        </div>
+    </header>
+    <div id="quote-list">
+        <h2 class="title">Quotes to Live By</h2>
+        <ul>
+            <li>
+                <span class="name">"The Only Way to get Ahead is to get Started"</span>
+                <span class="delete">Delete</span>
+            </li>
+            <li>
+                <span class="name">"The greater the pain. The greater the Love"</span>
+                <span class="delete">Delete</span>
+            </li>
+            <li>
+                <span class="name">"You are What you Eat!"</span>
+                <span class="delete">Delete</span>
+            </li>
+            <li>
+                <span class="name">"The Hardest Part is Admission"</span>
+                <span class="delete">Delete</span>
+            </li>
+        </ul>
+    </div>
+    <form id="add-quote">
+    <input type="checkbox" id="hide" />
+    <label for="hide">Hide all quotes</label>
+        <input type="text" placeholder="Add a Quote..." />
+        <br>
+        <button>Add</button>
+    </form>
+  <div id="tabbed-content">
+    <ul class="tabs">
+      <li data-target="#about" class="active">About</li>
+      <li data-target="#contact">Contact</li>
+    </ul>
+    <div class="panel active" id="about">
+      <p>Content for about tab...</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id nunc porta urna ornare rhoncus. Ut convallis ante at.</p>
+    </div>
+    <div class="panel" id="contact">
+      <p>Content for contact tab...</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id nunc porta urna ornare rhoncus. Ut convallis ante at.</p>
+    </div>
+  </div>
+</div>
 
 
-
-
+<script src="app.js"></script>
+<script src="form.js"></script>
 </body>
 
 </html>
